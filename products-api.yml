@@ -1,0 +1,31 @@
+server:
+  port: 7073
+
+spring:
+  application:
+    name: products-api
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ashokit_ecomm
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+app:
+  images:
+     upload-dir: E:\classes\product-images\        
